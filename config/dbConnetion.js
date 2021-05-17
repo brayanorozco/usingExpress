@@ -1,13 +1,13 @@
-const connection = require('mysql');
+const mysql = require('mysql');
 
-connection.createConnection({
+const connection = mysql.createConnection({
     host: 'localhost',
     user:'root',
     password: '1234',
     database: 'expressApp'
 });
 
-connection.connet((error) => {
+connection.connect((error) => {
     if(error) throw error;
     console.log('Connected with database.');
 })
